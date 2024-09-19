@@ -1,0 +1,12 @@
+<resources>
+    <string name="title">Old School Burger</string>
+    <string name="mushroom">Mushroom</string>
+    <string name="onion">Onion</string>
+    <string name="LTO">LTO</string>
+    <string name="cheese">Cheese</string>
+    <string name="time">20 min</string>
+    <string name="delivery">Delivery</string>
+    <string name="comment">Get your old school burger immediately</string>
+    <string name="price">6.99$</string>
+    <string name="addtocard">Add To Card</string>
+</resources>

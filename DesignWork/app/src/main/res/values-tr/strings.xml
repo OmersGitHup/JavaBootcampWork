@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="title">Old School Burger</string>
+    <string name="mushroom">Mantar</string>
+    <string name="onion">Soğan</string>
+    <string name="LTO">M.D.S.</string>
+    <string name="cheese">Peynir</string>
+    <string name="time">20 dakika</string>
+    <string name="delivery">Teslimat</string>
+    <string name="comment">Hemmencecik burgerine kavuş !</string>
+    <string name="price">150₺</string>
+    <string name="addtocard">Sepete Ekle</string>
+</resources>
