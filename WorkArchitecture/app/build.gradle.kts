@@ -6,6 +6,10 @@ android {
     namespace = "com.example.workarchitecture"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding=true
+    }
+
     defaultConfig {
         applicationId = "com.example.workarchitecture"
         minSdk = 24

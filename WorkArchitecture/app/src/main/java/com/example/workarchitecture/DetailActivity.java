@@ -1,5 +1,6 @@
 package com.example.workarchitecture;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,17 +9,22 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class DetailActivity extends AppCompatActivity {
+import com.example.workarchitecture.databinding.ActivityDetailBinding;
 
+public class DetailActivity extends AppCompatActivity {
+    private ActivityDetailBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_detail);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        binding=ActivityDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        String tookName=getIntent().getStringExtra("name");
+        String tookJob=getIntent().getStringExtra("job");
+        int tookAge=getIntent().getIntExtra("age",0);
+        Double tookHeight=getIntent().getDoubleExtra("height",0);
+
+        binding.textViewTitle.setText(tookName+" "+tookAge+" "+tookJob+" "+tookHeight);
+
     }
 }

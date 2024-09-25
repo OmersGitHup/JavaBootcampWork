@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_first"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.fragmentapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToA"
+            app:destination="@id/pageAFragment" />
+        <action
+            android:id="@+id/mainToX"
+            app:destination="@id/pageXFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageAFragment"
+        android:name="com.example.fragmentapp.PageAFragment"
+        android:label="fragment_page_a"
+        tools:layout="@layout/fragment_page_a" >
+        <action
+            android:id="@+id/AToB"
+            app:destination="@id/BToY" />
+    </fragment>
+    <fragment
+        android:id="@+id/BToY"
+        android:name="com.example.fragmentapp.PageBFragment"
+        android:label="fragment_page_b"
+        tools:layout="@layout/fragment_page_b" >
+        <action
+            android:id="@+id/action_pageBFragment_to_pageYFragment"
+            app:destination="@id/pageYFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageXFragment"
+        android:name="com.example.fragmentapp.PageXFragment"
+        android:label="fragment_page_x"
+        tools:layout="@layout/fragment_page_x" >
+        <action
+            android:id="@+id/XToY"
+            app:destination="@id/pageYFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageYFragment"
+        android:name="com.example.fragmentapp.PageYFragment"
+        android:label="fragment_page_y"
+        tools:layout="@layout/fragment_page_y" />
+</navigation>
