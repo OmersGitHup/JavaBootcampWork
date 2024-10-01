@@ -2,8 +2,10 @@ package com.example.widgets;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.widgets.databinding.ActivityMainBinding;
+
+import java.sql.Array;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,7 +63,34 @@ public class MainActivity extends AppCompatActivity {
         }));
 
         binding.buttonShow.setOnClickListener(view -> {
-            L
+
+        });
+
+        ArrayList<String> countries=new ArrayList<>();
+        countries.add("Türkiye");
+        countries.add("Italy");
+        countries.add("Japan");
+//
+//        ArrayAdapter arrayAdapter=new ArrayAdapter(this, android.R.layout.ListItem,countries);
+//        binding.li.setAdapter(arrayAdapter);
+
+
+        binding.textViewSlider.setText("Slider : "+binding.slider.getProgress());
+        binding.slider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                binding.textViewSlider.setText("Slider : "+i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
         });
 
 
